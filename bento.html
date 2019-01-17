@@ -1,12 +1,17 @@
 <html>
-    <body>
-<h1 id="idk"></h1>
-        <script>
+<body>
+
+<script>
+var xmlhttp = new HttpRequest();
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var mydata = JSON.parse(this.responseText);
+        window.alert(mydata.name);
+    }
+};
 xmlhttp.open("GET","bento.json",true);
-xmlhttp.send()
+xmlhttp.send();
 
-document.getElementById("idk").innerHTML = price;
-
-</script>
-    </body>
-    </html>
+</script>    
+</body>    
+</html>
