@@ -1,4 +1,10 @@
 {
-    "name":"Spicy Edamame",
-    "cost": 15
+    "name":"Spicy Ahi",
+    "cost": 2.50,
+    
+    "name1":"Edamame Bowl",
+    "cost1":3.50,
+
+    "name2":"Hot Tea",
+    "cost2":1.50
 }
