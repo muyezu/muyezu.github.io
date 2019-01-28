@@ -1,10 +1,21 @@
 {
-    "name":"Spicy Ahi",
-    "cost": 2.50,
-    
-    "name1":"Edamame Bowl",
-    "cost1":3.50,
+    "item":"Spicy Ahi",
+    "cost":2.50,
 
-    "name2":"Hot Tea",
-    "cost2":1.50
+    "item1":"Edamame Bowl",
+    "cost1":1.50,
+
+    "item2":"Hot Tea",
+    "cost2":1.50,
+
+    "item3":"Curry",
+    "cost3":3.00,
+
+    "item4":"Miso Soup",
+    "cost4":3.50,
+
+    "item5":"Soda",
+    "cost5":1.00,
+
+    "tax":0.04712
 }
