@@ -22,7 +22,7 @@ body {
 <body>
 
 <div id="div1">
-<h2>Order</h2> 
+<h2 id="itemName"></h2> 
 <input type="number" id="quant">  
 <button onclick="order()">order</button>
 <p id="SubTotal"></p>       
@@ -60,6 +60,7 @@ var q = document.getElementById("quant").value;
 var c = mydata.cost;
 var z = c * q;
 document.getElementById("SubTotal").innerHTML = "$" + z + "" + " : " + "" + q + " x " + "Spicy Ahi";
+document.getElementById("itemName").innerHTML = mydata.item;
 }
 
 
