@@ -2,17 +2,26 @@
 <head>
 <style>
     
-    
+ #div1 {
+  height:45vh;
+  width:30vw;
+  padding:10px;
+  border-radius: 25px;
+  background-size:cover;
+  background-color: white;
+  text-align:left;
+}   
 
 </style>
 </head>
 <body>
 
+<div id="div1>
 <h2>Order</h2> 
 <input type="number" id="quant">  
-<button onclick="O()">order</button>
-
-<p id="demo"></p>       
+<button onclick="order()">order</button>
+<p id="SubTotal"></p>       
+                </div>
 
 <script>
   
@@ -45,7 +54,7 @@ function order() {
 var q = document.getElementById("quant").value;
 var c = mydata.cost;
 var z = c * q;
-document.getElementById("demo").innerHTML = "$" + z + "" + " : " + "" + q + " x " + "Spicy Ahi";
+document.getElementById("SubTotal").innerHTML = "$" + z + "" + " : " + "" + q + " x " + "Spicy Ahi";
 }
 
 
