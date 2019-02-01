@@ -15,10 +15,35 @@
 <p id="demo"></p>       
 
 <script>
-function O() {
+  
+var items = {
+    "item" : "Spicy Ahi",
+    "cost" : 1.99,
+
+    "item1" : "Edamame Bowl",
+    "cost1" : 1.19,
+
+    "item2" : "Hot Tea",
+    "cost2" : 0.99,
+
+    "item3" : "Curry",
+    "cost3" : 2.99,
+
+    "item4" : "Miso Soup",
+    "cost4" : 3.09,
+
+    "item5" : "Soda",
+    "cost5" : 0.99,
+
+    "tax" : 0.04712
+};    
+    
+var items = JSON.stringify(items);
+var mydata = JSON.parse(items);    
+    
+function order() {
 var q = document.getElementById("quant").value;
-var c = 1.99;
-var t = 0.04712;
+var c = mydata.cost;
 var z = c * q;
 document.getElementById("demo").innerHTML = "$" + z + "" + " : " + "" + q + " x " + "Spicy Ahi";
 }
