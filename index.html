@@ -54,13 +54,13 @@ var items = {
     
 var items = JSON.stringify(items);
 var mydata = JSON.parse(items);    
+document.getElementById("itemName").innerHTML = mydata.item;
     
 function order() {
 var q = document.getElementById("quant").value;
 var c = mydata.cost;
 var z = c * q;
 document.getElementById("SubTotal").innerHTML = "$" + z + "" + " : " + "" + q + " x " + "Spicy Ahi";
-document.getElementById("itemName").innerHTML = mydata.item;
 }
 
 
