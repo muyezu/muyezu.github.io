@@ -1,17 +1,30 @@
 <html>
+<head>
+<style>
+    
+    
+
+</style>
+</head>
 <body>
 
-<script>
-var xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        var mydata = JSON.parse(this.responseText);
-        window.alert(mydata.cost2);
-    }
-};
-xmlhttp.open("GET","sample.json",true);
-xmlhttp.send();
+<h2>Order</h2> 
+<input type="number" id="quant">  
+<button onclick="O()">order</button>
 
-</script>    
-</body>    
+<p id="demo"></p>       
+
+<script>
+function O() {
+var q = document.getElementById("quant").value;
+var c = 1.99;
+var t = 0.04712;
+var z = c * q;
+document.getElementById("demo").innerHTML = "$" + z + "" + " : " + "" + q + " x " + "Spicy Ahi";
+}
+
+
+</script>
+
+</body>
 </html>
