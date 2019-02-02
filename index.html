@@ -49,14 +49,14 @@ body {
                 </div>
  
 <div id="div2">
-<h2 id="itemName"></h2> 
+<h2 id="itemName1"></h2> 
 <input type="number" id="quant">  
 <button onclick="order()">order</button>
 <p id="SubTotal"></p>       
                 </div>
 
 <div id="div3">
-<h2 id="itemName"></h2> 
+<h2 id="itemName2"></h2> 
 <input type="number" id="quant">  
 <button onclick="order()">order</button>
 <p id="SubTotal"></p>       
@@ -90,6 +90,9 @@ var items = {
 var items = JSON.stringify(items);
 var mydata = JSON.parse(items);    
 document.getElementById("itemName").innerHTML = mydata.item;
+document.getElementById("itemName1").innerHTML = mydata.item1;
+document.getElementById("itemName2").innerHTML = mydata.item2;
+
     
 function order() {
 var q = document.getElementById("quant").value;
@@ -98,6 +101,12 @@ var z = c * q;
 document.getElementById("SubTotal").innerHTML = "$" + z + "" + " : " + "" + q + " x " + "Spicy Ahi";
 }
 
+function order() {
+var q = document.getElementById("quant").value;
+var c = mydata.cost1;
+var z = c * q;
+document.getElementById("SubTotal").innerHTML = "$" + z + "" + " : " + "" + q + " x " + "Edamame Bowl";
+}
 
 </script>
 
