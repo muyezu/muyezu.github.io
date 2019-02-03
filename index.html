@@ -50,16 +50,16 @@ body {
  
 <div id="div2">
 <h2 id="itemName1"></h2> 
-<input type="number" id="quant">  
+<input type="number" id="quant1">  
 <button onclick="order()">order</button>
-<p id="SubTotal"></p>       
+<p id="SubTotal1"></p>       
                 </div>
 
 <div id="div3">
 <h2 id="itemName2"></h2> 
-<input type="number" id="quant">  
+<input type="number" id="quant2">  
 <button onclick="order()">order</button>
-<p id="SubTotal"></p>       
+<p id="SubTotal2"></p>       
                 </div>
     
  
@@ -102,12 +102,19 @@ document.getElementById("SubTotal").innerHTML = "$" + z + "" + " : " + "" + q + 
 }
 
 function order() {
-var q = document.getElementById("quant").value;
+var q = document.getElementById("quant1").value;
 var c = mydata.cost1;
 var z = c * q;
-document.getElementById("SubTotal").innerHTML = "$" + z + "" + " : " + "" + q + " x " + "Edamame Bowl";
+document.getElementById("SubTotal1").innerHTML = "$" + z + "" + " : " + "" + q + " x " + "Edamame Bowl";
 }
-
+    
+function order() {
+var q = document.getElementById("quant2").value;
+var c = mydata.cost2;
+var z = c * q;
+document.getElementById("SubTotal2").innerHTML = "$" + z + "" + " : " + "" + q + " x " + "Hot Tea";
+}
+    
 </script>
 
 </body>
