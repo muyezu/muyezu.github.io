@@ -1,0 +1,91 @@
+<html>
+<head>
+<style>
+
+body {
+  background-image: url("https://github.com/muyezu/muyezu.github.io/blob/master/city%20skyline.jpg?raw=true");
+  background-size:100vw 100vh;
+}   
+
+#div1 {
+  height:75vh;
+  width:50vw;
+  padding:10px;
+  border-radius: 10px;
+  background-color:white;
+  background-size:cover;
+  background-repeat:no-repeat;
+  text-align:left;
+  font-weight:bold;
+  text-size:30px;
+  float:left;
+}   
+
+</style>    
+</head>
+<body>
+
+<div id="div1">
+<button onclick="GTotal()">Check Out</button>    
+<h1 id="Spicy Ahi"></h1>
+<h1 id="Edamame Bowl"></h1>
+<h1 id="Hot Tea"></h1>
+<h1 id="Curry"></h1>
+<h1 id="Miso Soup"></h1>
+<h1 id="Soda"></h1>
+<h1 id="subtotal"></h1>
+<h1 id="GrandTotal"></h1>
+</div>
+
+<script>
+
+function GTotal() {
+var A = localStorage.getItem("1");
+var Q = localStorage.getItem("quant");
+var B = parseInt(A);
+var C = B.toFixed(2);
+document.getElementById("Spicy Ahi").innerHTML = "$" + C + " : " + " X " + Q + " " + "Spicy Ahi";
+
+var A1 = localStorage.getItem("2");
+var Q1 = localStorage.getItem("quant1");
+var B1 = parseInt(A1);
+var C1 = B1.toFixed(2);
+document.getElementById("Edamame Bowl").innerHTML = "$" + C1 + " : " + " X " + Q1 + " " + "Edamame Bowl";
+
+var A2 = localStorage.getItem("3");
+var Q2 = localStorage.getItem("quant2");
+var B2 = parseInt(A2);
+var C2 = B2.toFixed(2);
+document.getElementById("Hot Tea").innerHTML = "$" + C2 + " : " + " X " + Q2 + " " + "Hot Tea";
+
+var A3 = localStorage.getItem("4");
+var Q3 = localStorage.getItem("quant3");
+var B3 = parseInt(A3);
+var C3 = B3.toFixed(2);
+document.getElementById("Curry").innerHTML = "$" + C3 + " : " + " X " + Q3 + " " + "Curry";
+
+var A4 = localStorage.getItem("5");
+var Q4 = localStorage.getItem("quant4");
+var B4 = parseInt(A4);
+var C4 = B4.toFixed(2);
+document.getElementById("Miso Soup").innerHTML = "$" + C4 + " : " + " X " + Q4 + " " + "Miso Soup";
+
+var A5 = localStorage.getItem("6");
+var Q5 = localStorage.getItem("quant5");
+var B5 = parseInt(A5);
+var C5 = B5.toFixed(2);
+document.getElementById("Soda").innerHTML = "$" + C5 + " : " + " X " + Q5 + " " + "Soda";
+
+var subtotal = B+B1+B2+B3+B4+B5;
+document.getElementById("subtotal").innerHTML = "$" + subtotal + ".00" + " : " + "Subtotal";
+var tax = subtotal * 0.04712;
+var GTotal = subtotal + tax;
+var GrandTotal = GTotal.toFixed(2);
+document.getElementById("GrandTotal").innerHTML = "$" + GrandTotal + " : " + "Amount Due";
+
+
+}
+
+</script>
+</body>
+</html>
