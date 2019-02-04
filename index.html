@@ -3,86 +3,213 @@
 <style>
     
  #div1 {
-  height:25vh;
-  width:20vw;
+  height:35vh;
+  width:25vw;
   padding:10px;
-  border-radius: 25px;
+  border-radius: 10px;
+  background-image: url("https://media-cdn.tripadvisor.com/media/photo-s/08/96/51/8e/spicy-ahi-roll-sushi.jpg");
   background-size:cover;
-  background-color: white;
+  background-repeat:no-repeat;
   text-align:left;
+  font-weight:bold;
+  text-size:30px;
+  float:left;
 }   
     
  #div2 {
-  height:25vh;
-  width:20vw;
+  height:35vh;
+  width:25vw;
   padding:10px;
   border-radius: 25px;
   background-size:cover;
-  background-color: white;
+  background-repeat:no-repeat;
+  background-image: url("https://www.adn.com/resizer/Cqi4kgpwMyIgCwybSUqYIJ6POUc=/1200x0/s3.amazonaws.com/arc-wordpress-client-uploads/adn/wp-content/uploads/2018/09/05110138/maya-wilson-edamame.jpg");
   text-align:left;
+  font-weight:bold;
+  text-size:30px;
+  float:left;
 } 
     
  #div3 {
-  height:25vh;
-  width:20vw;
+  height:35vh;
+  width:25vw;
   padding:10px;
   border-radius: 25px;
   background-size:cover;
-  background-color: white;
+  background-repeat:no-repeat;
+  background-image: url("http://mylovetea.com/wp-content/uploads/2015/12/%E7%A5%81%E7%BA%A21.jpg");
   text-align:left;
+  float:left;
 }   
-    
+
+#div4 {
+  height:35vh;
+  width:25vw;
+  padding:10px;
+  border-radius: 25px;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-image: url("https://www.rotinrice.com/wp-content/uploads/2011/09/Jap-Curry-Rice-1.jpg");
+  text-align:left;
+  float:left;
+}   
+
+#div5 {
+  height:35vh;
+  width:25vw;
+  padding:10px;
+  border-radius: 25px;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-image: url("https://assets.epicurious.com/photos/576450dde047a6cf1ee8268c/2:1/w_1260%2Ch_630/miso-soup.jpg");
+  text-align:left;
+  float:left;
+}   
+
+#div6 {
+  height:35vh;
+  width:25vw;
+  padding:10px;
+  border-radius: 25px;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMgQA3XEFgrMwbpG2rDHMEuo6xn5V5_WcvAoMIf8fJ19X-5qbq");
+  text-align:left;
+  float:left;
+}   
+
+#div7 {
+  height:20vh;
+  width:95vw;
+  float:left;
+}   
+
+#div8 {
+float:left;
+height:35vh;
+width:13vw;
+}
+
 body {
   background-image: url("https://github.com/muyezu/muyezu.github.io/blob/master/city%20skyline.jpg?raw=true");
   background-size:100vw 100vh;
-}    
+}   
+
+#div1A {
+  background-color:rgba(255, 255, 255, 0.2);
+
+}
+
+#div2A {
+  background-color:rgba(255, 255, 255, 0.2);
+
+}
+
+#div3A {
+  background-color:rgba(255, 255, 255, 0.2);
+
+}
+
+#div4A {
+  background-color:rgba(255, 255, 255, 0.2);
+
+}
+
+#div5A {
+  background-color:rgba(255, 255, 255, 0.2);
+
+}
+
+#div6A {
+  background-color:rgba(255, 255, 255, 0.2);
+
+}
 
 </style>
 </head>
 <body>
 
 <div id="div1">
+<div id="div1A"> 
 <h2 id="itemName"></h2> 
 <input type="number" id="quant">  
 <button onclick="order()">order</button>
-<p id="SubTotal"></p>       
-                </div>
- 
+<p id="SubTotal"></p>   
+</div>    
+</div>
+
+
 <div id="div2">
+<div id="div2A">
 <h2 id="itemName1"></h2> 
 <input type="number" id="quant1">  
 <button onclick="order1()">order</button>
-<p id="SubTotal1"></p>       
-                </div>
+<p id="SubTotal1"></p> 
+</div>      
+</div>
 
 <div id="div3">
+<div id="div3A">
 <h2 id="itemName2"></h2> 
 <input type="number" id="quant2">  
 <button onclick="order2()">order</button>
-<p id="SubTotal2"></p>       
-                </div>
-    
- 
+<p id="SubTotal2"></p>    
+</div>   
+</div>
+
+<div id="div7"></div>
+
+<div id="div4">
+<div id="div4A">
+<h2 id="itemName3"></h2> 
+<input type="number" id="quant3">  
+<button onclick="order3()">order</button>
+<p id="SubTotal3"></p> 
+</div>      
+</div> 
+
+<div id="div5">
+<div id="div5A">
+<h2 id="itemName4"></h2> 
+<input type="number" id="quant4">  
+<button onclick="order4()">order</button>
+<p id="SubTotal4"></p> 
+</div>      
+</div>
+
+<div id="div6">
+<div id="div6A">
+<h2 id="itemName5"></h2> 
+<input type="number" id="quant5">  
+<button onclick="order5()">order</button>
+<p id="SubTotal5"></p> 
+</div>      
+</div>
+
+<div id="div8">
+<button onclick="checkout()">To Checkout</button>
+</div>
+
 <script>
   
 var items = {
     "item" : "Spicy Ahi",
-    "cost" : 1.99,
+    "cost" : 2.00,
 
     "item1" : "Edamame Bowl",
-    "cost1" : 1.19,
+    "cost1" : 2.00,
 
     "item2" : "Hot Tea",
-    "cost2" : 0.99,
+    "cost2" : 1.00,
 
     "item3" : "Curry",
-    "cost3" : 2.99,
+    "cost3" : 3.00,
 
     "item4" : "Miso Soup",
-    "cost4" : 3.09,
+    "cost4" : 3.00,
 
     "item5" : "Soda",
-    "cost5" : 0.99,
+    "cost5" : 1.00,
 
     "tax" : 0.04712
 };    
@@ -92,29 +219,75 @@ var mydata = JSON.parse(items);
 document.getElementById("itemName").innerHTML = mydata.item;
 document.getElementById("itemName1").innerHTML = mydata.item1;
 document.getElementById("itemName2").innerHTML = mydata.item2;
-
+document.getElementById("itemName3").innerHTML = mydata.item3;
+document.getElementById("itemName4").innerHTML = mydata.item4;
+document.getElementById("itemName5").innerHTML = mydata.item5;
     
 function order() {
 var q = document.getElementById("quant").value;
 var c = mydata.cost;
 var z = c * q;
-document.getElementById("SubTotal").innerHTML = "$" + z + "" + " : " + "" + q + " x " + "Spicy Ahi";
+var y = z.toFixed(2);
+document.getElementById("SubTotal").innerHTML = "$" + y + "" + " : " + "" + q + " x " + mydata.item;
+localStorage.setItem("1",z);
+localStorage.setItem("quant",q);
 }
 
 function order1() {
 var q = document.getElementById("quant1").value;
 var c = mydata.cost1;
 var z = c * q;
-document.getElementById("SubTotal1").innerHTML = "$" + z + "" + " : " + "" + q + " x " + "Edamame Bowl";
+var y1 = z.toFixed(2);
+document.getElementById("SubTotal1").innerHTML = "$" + y1 + "" + " : " + "" + q + " x " + mydata.item1;
+localStorage.setItem("2",z);
+localStorage.setItem("quant1",q);
 }
     
 function order2() {
 var q = document.getElementById("quant2").value;
 var c = mydata.cost2;
 var z = c * q;
-document.getElementById("SubTotal2").innerHTML = "$" + z + "" + " : " + "" + q + " x " + "Hot Tea";
+var y2 = z.toFixed(2);
+document.getElementById("SubTotal2").innerHTML = "$" + y2 + "" + " : " + "" + q + " x " + mydata.item2;
+localStorage.setItem("3",z);
+localStorage.setItem("quant2",q);
 }
-    
+   
+function order3() {
+var q = document.getElementById("quant3").value;
+var c = mydata.cost3;
+var z = c * q;
+var y3 = z.toFixed(2);
+document.getElementById("SubTotal3").innerHTML = "$" + y3 + "" + " : " + "" + q + " x " + mydata.item3;
+localStorage.setItem("4",z);
+localStorage.setItem("quant3",q);
+}
+
+function order4() {
+var q = document.getElementById("quant4").value;
+var c = mydata.cost4;
+var z = c * q;
+var y4 = z.toFixed(2);
+document.getElementById("SubTotal4").innerHTML = "$" + y4 + "" + " : " + "" + q + " x " + mydata.item4;
+localStorage.setItem("5",z);
+localStorage.setItem("quant4",q);
+}
+
+function order5() {
+var q = document.getElementById("quant5").value;
+var c = mydata.cost5;
+var z = c * q;
+var y5 = z.toFixed(2);
+document.getElementById("SubTotal5").innerHTML = "$" + y5 + "" + " : " + "" + q + " x " + mydata.item5;
+localStorage.setItem("6",z);
+localStorage.setItem("quant5",q);
+}
+
+function checkout() {
+location.href = "checkout.html";
+}
+
+
 </script>
 
 </body>
