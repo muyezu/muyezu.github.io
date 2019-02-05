@@ -38,8 +38,6 @@ body {
 </div>
 
 <script>
-
-localStorage.clear();  
   
 function GTotal() {
 var A = localStorage.getItem("1");
@@ -85,6 +83,7 @@ var GTotal = subtotal + tax;
 var GrandTotal = GTotal.toFixed(2);
 document.getElementById("GrandTotal").innerHTML = "$" + GrandTotal + " : " + "Amount Due";
 
+localStorage.clear();
 
 }
 
