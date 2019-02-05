@@ -26,7 +26,8 @@ body {
 <body>
 
 <div id="div1">
-<button onclick="GTotal()">Check Out</button>    
+<button onclick="GTotal()">Check Out</button>  
+  <button onclick="GoBack()">Back to Store</button>
 <h1 id="Spicy Ahi"></h1>
 <h1 id="Edamame Bowl"></h1>
 <h1 id="Hot Tea"></h1>
@@ -83,8 +84,10 @@ var GTotal = subtotal + tax;
 var GrandTotal = GTotal.toFixed(2);
 document.getElementById("GrandTotal").innerHTML = "$" + GrandTotal + " : " + "Amount Due";
 
+function GoBack() {
 localStorage.clear();
-
+location.href = "index.html";
+}
 }
 
 </script>
