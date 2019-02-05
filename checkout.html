@@ -83,11 +83,12 @@ var tax = subtotal * 0.04712;
 var GTotal = subtotal + tax;
 var GrandTotal = GTotal.toFixed(2);
 document.getElementById("GrandTotal").innerHTML = "$" + GrandTotal + " : " + "Amount Due";
-
+  
+}
+  
 function GoBack() {
 localStorage.clear();
 location.href = "index.html";
-}
 }
 
 </script>
