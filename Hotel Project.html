@@ -1,0 +1,641 @@
+<html>
+<head>
+
+<style>
+
+body {
+  background-image: url("city skyline.jpg");
+  background-size:100vw 100vh;
+}
+
+#logo {
+  height:28vh;
+  width:15vw;
+  background-image: url("Heroes Never Die.jpeg");
+  float:right;
+  background-size:cover;
+  border-radius:20px;
+}
+
+#hotelName {
+  text-align:center;
+  border-style:dashed;
+  font-style: italic;
+}
+
+#roomNum {
+  text-align:center;
+  border-style:dashed;
+  font-style: italic;
+}
+
+#div1 {
+  height:45vh;
+  width:30vw;
+  padding:10px;
+  border-radius: 25px;
+  background-size:cover;
+  background-color: white;
+  text-align:left;
+}
+
+#div2 {
+  height:45vh;
+  width:30vw;
+  padding:10px;
+  border-radius: 25px;
+  background-size:cover;
+  background-color: white;
+  text-align:left;
+  overflow:hidden;
+}
+
+#div3 {
+  height:45vh;
+  width:30vw;
+  padding:10px;
+  border-radius: 25px;
+  background-size:cover;
+  background-color: white;
+  text-align:left;
+  overflow:hidden;
+}
+
+#div4 {
+  height:45vh;
+  width:30vw;
+  padding:10px;
+  border-radius: 25px;
+  background-size:cover;
+  background-color: white;
+  text-align:left;
+  overflow:hidden;
+}
+
+#div5 {
+  height:45vh;
+  width:30vw;
+  padding:10px;
+  border-radius: 25px;
+  background-size:cover;
+  background-color: white;
+  text-align:left;
+  overflow:hidden;
+}
+
+#div6 {
+  height:45vh;
+  width:30vw;
+  padding:10px;
+  border-radius: 25px;
+  background-size:cover;
+  background-color: white;
+  text-align:left;
+  overflow:hidden;
+}
+
+#guestlog{
+  text-align:center;
+  border-style:dashed;
+  font-style: italic;
+}
+</style>
+</head>
+<body>
+  
+<div id="logo">
+</div>
+
+<h1 id=hotelName>Hotel Uyezu</h1>
+
+<div id="div1">
+<input type="text" id="usersChoice">
+<select id="people">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+</select>
+<button onclick="addPerson()" id="add">Check In</button>
+<button onclick="removeAll()" id="remove">Remove All</button>
+<button onclick="removeOne()" id="delete">Check Out</button>
+<button onclick="lockRoom()" id="lock">Lock Room</button>
+<button onclick="unlockRoom()" id="unlock">Unlock Room</button>
+<ol id="ol">
+<h1 id="waitListed"></h1>
+<h1 id="roomNum">Room 1</h1>
+</ol>
+</div>
+
+<div id="div2">
+<input type="text" id="usersChoice1">
+<select id="people1">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+</select>
+<button onclick="addPerson1()" id="add1">Check In</button>
+<button onclick="removeAll1()" id="remove1">Remove All</button>
+<button onclick="removeOne1()" id="delete1">Check Out</button>
+<button onclick="lockRoom1()" id="lock1">Lock Room</button>
+<button onclick="unlockRoom1()" id="unlock1">Unlock Room</button>
+<ol id="ol">
+<h1 id="waitListed1"></h1>
+<h1 id="roomNum">Room 2</h1>
+</ol>
+</div>
+
+<div id="div3">
+<input type="text" id="usersChoice2">
+<select id="people2">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+</select>
+<button onclick="addPerson2()" id="add2">Check In</button>
+<button onclick="removeAll2()" id="remove2">Remove All</button>
+<button onclick="removeOne2()" id="delete2">Check Out</button>
+<button onclick="lockRoom2()" id="lock2">Lock Room</button>
+<button onclick="unlockRoom2()" id="unlock2">Unlock Room</button>
+<ol id="ol">
+<h1 id="waitListed2"></h1>
+<h1 id="roomNum">Room 3</h1>
+</ol>
+</div>
+
+<div id="div4">
+<input type="text" id="usersChoice3">
+<select id="people3">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+</select>
+<button onclick="addPerson3()" id="add3">Check In</button>
+<button onclick="removeAll3()" id="remove3">Remove All</button>
+<button onclick="removeOne3()" id="delete3">Check Out</button>
+<button onclick="lockRoom3()" id="lock3">Lock Room</button>
+<button onclick="unlockRoom3()" id="unlock3">Unlock Room</button>
+<ol id="ol">
+<h1 id="waitListed3"></h1>
+<h1 id="roomNum">Room 4</h1>
+</ol>
+</div>
+
+<div id="div5">
+<input type="text" id="usersChoice4">
+<select id="people4">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+</select>
+<button onclick="addPerson4()" id="add4">Check In</button>
+<button onclick="removeAll4()" id="remove4">Remove All</button>
+<button onclick="removeOne4()" id="delete4">Check Out</button>
+<button onclick="lockRoom4()" id="lock4">Lock Room</button>
+<button onclick="unlockRoom4()" id="unlock4">Unlock Room</button>
+<ol id="ol">
+<h1 id="waitListed4"></h1>
+<h1 id="roomNum">Room 5</h1>
+</ol>
+</div>
+
+<div id="div6">
+<input type="text" id="usersChoice5">
+<select id="people5">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+</select>
+<button onclick="addPerson5()" id="add5">Check In</button>
+<button onclick="removeAll5()" id="remove5">Remove All</button>
+<button onclick="removeOne5()" id="delete5">Check Out</button>
+<button onclick="lockRoom5()" id="lock5">Lock Room</button>
+<button onclick="unlockRoom5()" id="unlock5">Unlock Room</button>
+<ol id="ol">
+<h1 id="waitListed5"></h1>
+<h1 id="roomNum">Room 6</h1>
+</ol>
+</div>
+
+<script>
+
+var a = 0;
+
+var arr = [""];
+
+function addPerson() {
+var Month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+var d = new Date();
+var M = d.getMonth();
+var N = d.getDate();
+var H = d.getHours();
+var Min = d.getMinutes();
+var S = d.getSeconds();
+
+  a++;
+  var x = document.getElementById('usersChoice').value;
+  arr.push("x");
+  var li = document.createElement('li');
+  var newText = document.createTextNode(x + " Was checked in on " + Month[M]+N+" At "+H+":"+Min+":"+S);
+  li.appendChild(newText);
+  var olTag = document.getElementsByTagName('ol')[0];
+  olTag.appendChild(li);
+
+document.getElementById('delete').disabled = false;
+
+  if(a >= 4) {
+   document.getElementById('add').disabled = true;
+  }
+}
+
+function lockRoom() {
+  document.getElementById('add').disabled = true;
+  document.getElementById('waitListed').innerHTML = "Room Locked";
+}
+
+function unlockRoom() {
+  document.getElementById('add').disabled = false;
+  document.getElementById('waitListed').innerHTML = "Room Unlocked"
+  document.getElementById('waitListed').innerHTML = "";
+
+if (a >= 4) {
+  document.getElementById('add').disabled = true;
+ }
+}
+
+function removeAll() {
+   while (a >= 1) {
+     a--;
+     var minus = document.getElementById('people').value;
+     var arr = document.getElementsByTagName("li")[minus - 1];
+     var parent = arr.parentNode;
+     parent.removeChild(arr);
+     document.getElementById('add').disabled = false;
+   }
+}
+
+function removeOne() {
+a--;
+var minus = document.getElementById('people').value;
+var arr = document.getElementsByTagName("li")[minus - 1];
+var parent = arr.parentNode;
+parent.removeChild(arr);
+document.getElementById('add').disabled = false;
+
+if (a <= 0) {
+  document.getElementById('delete').disabled = true;
+ }
+}
+
+
+var b = 0;
+
+var arr1 = [""];
+
+function addPerson1() {
+var Month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+var d = new Date();
+var M = d.getMonth();
+var N = d.getDate();
+var H = d.getHours();
+var Min = d.getMinutes();
+var S = d.getSeconds();
+
+  b++;
+  var x = document.getElementById('usersChoice1').value;
+  arr1.push("x");
+  var li = document.createElement('li');
+  var newText = document.createTextNode(x + " Was checked in on " + Month[M]+N+" At "+H+":"+Min+":"+S);
+  li.appendChild(newText);
+  var olTag = document.getElementsByTagName('ol')[1];
+  olTag.appendChild(li);
+
+document.getElementById('delete1').disabled = false;
+
+  if(b >= 4) {
+   document.getElementById('add1').disabled = true;
+  }
+}
+
+function lockRoom1() {
+  document.getElementById('add1').disabled = true;
+  document.getElementById('waitListed1').innerHTML = "Room Locked";
+}
+
+function unlockRoom1() {
+  document.getElementById('add1').disabled = false;
+  document.getElementById('waitListed1').innerHTML = "Room Unlocked"
+  document.getElementById('waitListed1').innerHTML = "";
+
+if (b >= 4) {
+  document.getElementById('add1').disabled = true;
+ }
+}
+
+function removeAll1() {
+   while (b >= 1) {
+     b--;
+     var minus = document.getElementById('people1').value;
+     var arr1 = document.getElementsByTagName("li")[minus - 1];
+     var parent1 = arr1.parentNode;
+     parent1.removeChild(arr1);
+     document.getElementById('add1').disabled = false;
+   }
+}
+
+function removeOne1() {
+b--;
+var minus = document.getElementById('people1').value;
+var arr1 = document.getElementsByTagName("li")[minus - 1];
+var parent1 = arr1.parentNode;
+parent1.removeChild(arr1);
+document.getElementById('add1').disabled = false;
+
+if (b <= 0) {
+  document.getElementById('delete1').disabled = true;
+ }
+}
+
+
+var c = 0;
+
+var arr2 = [""];
+
+function addPerson2() {
+var Month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+var d = new Date();
+var M = d.getMonth();
+var N = d.getDate();
+var H = d.getHours();
+var Min = d.getMinutes();
+var S = d.getSeconds();
+
+  c++;
+  var x = document.getElementById('usersChoice2').value;
+  arr2.push("x");
+  var li = document.createElement('li');
+  var newText = document.createTextNode(x + " Was checked in on " + Month[M]+N+" At "+H+":"+Min+":"+S);
+  li.appendChild(newText);
+  var olTag = document.getElementsByTagName('ol')[2];
+  olTag.appendChild(li);
+
+document.getElementById('delete2').disabled = false;
+
+  if(c >= 4) {
+   document.getElementById('add2').disabled = true;
+  }
+}
+
+function lockRoom2() {
+  document.getElementById('add2').disabled = true;
+  document.getElementById('waitListed2').innerHTML = "Room Locked";
+}
+
+function unlockRoom2() {
+  document.getElementById('add2').disabled = false;
+  document.getElementById('waitListed2').innerHTML = "Room Unlocked"
+  document.getElementById('waitListed2').innerHTML = "";
+
+if (c >= 4) {
+  document.getElementById('add2').disabled = true;
+ }
+}
+
+function removeAll2() {
+   while (c >= 1) {
+     c--;
+     var minus = document.getElementById('people2').value;
+     var arr2 = document.getElementsByTagName("li")[minus - 1];
+     var parent2 = arr2.parentNode;
+     parent2.removeChild(arr2);
+     document.getElementById('add2').disabled = false;
+   }
+}
+
+function removeOne2() {
+c--;
+var minus = document.getElementById('people2').value;
+var arr2 = document.getElementsByTagName("li")[minus - 1];
+var parent2 = arr2.parentNode;
+parent2.removeChild(arr2);
+document.getElementById('add2').disabled = false;
+
+if (c <= 0) {
+  document.getElementById('delete2').disabled = true;
+ }
+}
+
+
+var d = 0;
+
+var arr3 = [""];
+
+function addPerson3() {
+var Month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+var d = new Date();
+var M = d.getMonth();
+var N = d.getDate();
+var H = d.getHours();
+var Min = d.getMinutes();
+var S = d.getSeconds();
+
+  d++;
+  var x = document.getElementById('usersChoice3').value;
+  arr3.push("x");
+  var li = document.createElement('li');
+  var newText = document.createTextNode(x + " Was checked in on " + Month[M]+N+" At "+H+":"+Min+":"+S);
+  li.appendChild(newText);
+  var olTag = document.getElementsByTagName('ol')[3];
+  olTag.appendChild(li);
+
+document.getElementById('delete3').disabled = false;
+
+  if(d >= 4) {
+   document.getElementById('add3').disabled = true;
+  }
+}
+
+function lockRoom3() {
+  document.getElementById('add3').disabled = true;
+  document.getElementById('waitListed3').innerHTML = "Room Locked";
+}
+
+function unlockRoom3() {
+  document.getElementById('add3').disabled = false;
+  document.getElementById('waitListed3').innerHTML = "Room Unlocked"
+  document.getElementById('waitListed3').innerHTML = "";
+
+if (d >= 4) {
+  document.getElementById('add3').disabled = true;
+ }
+}
+
+function removeAll3() {
+   while (d >= 1) {
+     d--;
+     var minus = document.getElementById('people3').value;
+     var arr3 = document.getElementsByTagName("li")[minus - 1];
+     var parent3 = arr3.parentNode;
+     parent3.removeChild(arr3);
+     document.getElementById('add3').disabled = false;
+   }
+}
+
+function removeOne3() {
+d--;
+var minus = document.getElementById('people3').value;
+var arr3 = document.getElementsByTagName("li")[minus - 1];
+var parent3 = arr3.parentNode;
+parent3.removeChild(arr3);
+document.getElementById('add3').disabled = false;
+
+if (d <= 0) {
+  document.getElementById('delete3').disabled = true;
+ }
+}
+
+
+var e = 0;
+
+var arr4 = [""];
+
+function addPerson4() {
+var Month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+var d = new Date();
+var M = d.getMonth();
+var N = d.getDate();
+var H = d.getHours();
+var Min = d.getMinutes();
+var S = d.getSeconds();
+
+  e++;
+  var x = document.getElementById('usersChoice4').value;
+  arr4.push("x");
+  var li = document.createElement('li');
+  var newText = document.createTextNode(x + " Was checked in on " + Month[M]+N+" At "+H+":"+Min+":"+S);
+  li.appendChild(newText);
+  var olTag = document.getElementsByTagName('ol')[4];
+  olTag.appendChild(li);
+
+document.getElementById('delete4').disabled = false;
+
+  if(e >= 4) {
+   document.getElementById('add4').disabled = true;
+  }
+}
+
+function lockRoom4() {
+  document.getElementById('add4').disabled = true;
+  document.getElementById('waitListed4').innerHTML = "Room Locked";
+}
+
+function unlockRoom4() {
+  document.getElementById('add4').disabled = false;
+  document.getElementById('waitListed4').innerHTML = "Room Unlocked"
+  document.getElementById('waitListed4').innerHTML = "";
+
+if (e >= 4) {
+  document.getElementById('add4').disabled = true;
+ }
+}
+
+function removeAll4() {
+   while (e >= 1) {
+     e--;
+     var minus = document.getElementById('people4').value;
+     var arr4 = document.getElementsByTagName("li")[minus - 1];
+     var parent4 = arr4.parentNode;
+     parent4.removeChild(arr4);
+     document.getElementById('add4').disabled = false;
+   }
+}
+
+function removeOne4() {
+e--;
+var minus = document.getElementById('people4').value;
+var arr4 = document.getElementsByTagName("li")[minus - 1];
+var parent4 = arr4.parentNode;
+parent4.removeChild(arr4);
+document.getElementById('add4').disabled = false;
+
+if (e <= 0) {
+  document.getElementById('delete4').disabled = true;
+ }
+}
+
+
+var f = 0;
+
+var arr5 = [""];
+
+function addPerson5() {
+var Month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+var d = new Date();
+var M = d.getMonth();
+var N = d.getDate();
+var H = d.getHours();
+var Min = d.getMinutes();
+var S = d.getSeconds();
+
+  f++;
+  var x = document.getElementById('usersChoice5').value;
+  arr5.push("x");
+  var li = document.createElement('li');
+  var newText = document.createTextNode(x + " Was checked in on " + Month[M]+N+" At "+H+":"+Min+":"+S);
+  li.appendChild(newText);
+  var olTag = document.getElementsByTagName('ol')[5];
+  olTag.appendChild(li);
+
+document.getElementById('delete5').disabled = false;
+
+  if(f >= 4) {
+   document.getElementById('add5').disabled = true;
+  }
+}
+
+function lockRoom5() {
+  document.getElementById('add5').disabled = true;
+  document.getElementById('waitListed5').innerHTML = "Room Locked";
+}
+
+function unlockRoom5() {
+  document.getElementById('add5').disabled = false;
+  document.getElementById('waitListed5').innerHTML = "Room Unlocked"
+  document.getElementById('waitListed5').innerHTML = "";
+
+if (f >= 4) {
+  document.getElementById('add5').disabled = true;
+ }
+}
+
+function removeAll5() {
+   while (f >= 1) {
+     f--;
+     var minus = document.getElementById('people5').value;
+     var arr5 = document.getElementsByTagName("li")[minus - 1];
+     var parent5 = arr5.parentNode;
+     parent5.removeChild(arr5);
+     document.getElementById('add5').disabled = false;
+   }
+}
+
+function removeOne5() {
+f--;
+var minus = document.getElementById('people5').value;
+var arr5 = document.getElementsByTagName("li")[minus - 1];
+var parent5 = arr5.parentNode;
+parent5.removeChild(arr5);
+document.getElementById('add5').disabled = false;
+
+if (f <= 0) {
+  document.getElementById('delete5').disabled = true;
+ }
+}
+</script>
+</body>
+</html>
