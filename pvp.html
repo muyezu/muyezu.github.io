@@ -5,15 +5,26 @@
 
 body {
 overflow: hidden;
-padding: 20;
-margin: 20;
+margin-top: 20px;
+margin-bottom: 20px;
+margin-right: 20px;
+margin-left: 20px;
+}
+
+h2 {
+float: right;
+}
+
+h1 {
+float: left;
 }
 
 </style>
 </head>
 <body>
 
-<h1 id="game"></h1>
+<h1 id="Rvotes"></h1>
+<h2 id="Dvotes"></h2>
 
 <script>
 
@@ -23,7 +34,15 @@ var w = window.innerWidth;
 var h = window.innerHeight;
 var player1 = new player1(); 
 var player2 = new player2();
+var player3 = new player3();
+//var x = this.x;
+//var y = this.y;
+//var a = this.a;
+//var b = this.b;
 var d;
+var D = 0;
+var R = 0;
+
 
 
 function setup() {
@@ -36,6 +55,8 @@ player1.show1();
 player1.move1();
 player2.show2();
 player2.move2();
+player3.show3();
+player3.move3();
 }
 
 function player1() {
@@ -43,7 +64,7 @@ this.x = 200; //X AXIS
 this.y = 100; //Y AXIS
 this.show1 = function() {
 fill(color('red'));
-ellipse(this.x, this.y, 50, 50);
+ellipse(this.x, this.y, 25, 25);
 }
 this.move1 = function() {
 if ((keyIsDown(65)) && (this.x > 0)) {
@@ -65,11 +86,11 @@ this.y += speed1; //DOWN
 }
 
 function player2() {
-this.a = 200; //X AXIS
-this.b = 500; //Y AXIS
+this.a = 1100; //X AXIS
+this.b = 100; //Y AXIS
 this.show2 = function() {
 fill(color('blue'));
-ellipse(this.a, this.b, 50, 50);
+ellipse(this.a, this.b, 25, 25);
 }
 this.move2 = function() {
 if ((keyIsDown(74)) && (this.a > 0)) {
@@ -87,10 +108,28 @@ this.b -= speed2; //UP
 if ((keyIsDown(75)) && (this.b < h - 100)) {
 this.b += speed2; //DOWN
 }
- d = dist(this.a,this.b,player1.x,player1.y);
-if(d < 50){
-noLoop();
-document.getElementById('game').innerHTML = "ded";
+}
+}
+
+function player3() {
+var c = Math.floor(Math.random() * w);
+var d = Math.floor(Math.random() * h);
+this.c = c; //X AXIS
+this.d = d; //Y AXIS
+this.show3 = function() {
+fill(color('purple'));
+ellipse(this.c, this.d, 50, 50);
+}
+this.move3 = function() {
+d1 = dist(this.c,this.d,player1.x,player1.y);
+d2 = dist(this.c,this.d,player2.a,player2.b);
+if(d1 < 50){
+R += 10;
+document.getElementById('Rvotes').innerHTML = " Republicans have " + R + " votes";
+}
+if(d2 < 50){
+D += 10;
+document.getElementById('Dvotes').innerHTML =  " Democrats have " + D + " votes";
 }
 }
 }
