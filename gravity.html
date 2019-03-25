@@ -1,0 +1,70 @@
+<html>
+<head>
+<script src="p5.min.js"></script>
+<style>
+
+body {
+overflow: hidden;
+padding: 0;
+margin: 0;
+}
+
+</style>
+</head>
+<body>
+
+
+
+<script>
+
+var w = window.innerWidth;
+var h = window.innerHeight;
+var jumper = new jumper(); //im going to create a global object
+
+
+function setup() {
+createCanvas(w,h);
+}
+
+function draw() {
+background(0, 0, 0);
+jumper.show();
+jumper.move();
+jumper.up();
+jumper.update();
+}
+
+function jumper() {
+this.gravity = 10; //the force of gravity
+this.lift = -10; //opposing force
+this.velocity = 0; //speed of gravity
+this.x = 50;
+this.y = 30;
+this.show = function() {
+fill(color('red'));
+ellipse(this.x, this.y, 50, 50);
+}
+this.move = function() {
+if (keyCode(32)) {
+this.y += this.lift;
+}
+}
+this.up = function() {
+this.y += this.lift;
+}
+this.update = function() {
+this.velocity += this.gravity;
+this.y += this.velocity;
+this.velocity *= 0.9;
+if(this.y > h) {
+this.y = h;
+}
+if(this.y > 0) {
+this.velocity = 0;
+}
+}
+}
+
+</script>
+</body>
+</html>
