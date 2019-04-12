@@ -16,15 +16,18 @@ margin: 0;
 </head>
 <body>
 
-
+<h1 id="score"></h1>
+<h1 id="scoobysmack"></h1>
 
 <script>
 
+var score = 0;
 var w = window.innerWidth;
 var h = window.innerHeight;
 var jumper = new jumper(); //im going to create a global object
 var barrier = new barrier();
 var scoobysmack = false;
+
 
 function setup() {
 createCanvas(w,h);
@@ -40,7 +43,10 @@ barrier.update();
 scoobysmack = collideRectRect(jumper.x,jumper.y,50,50,barrier.a,barrier.b,100,300);
 if (scoobysmack === true) {
 noLoop();
+document.getElementById('scoobysmack').innerHTML = " collision " + scoobysmack;
 }
+document.getElementById('scoobysmack').innerHTML = " collision " + scoobysmack;
+document.getElementById('score').innerHTML = " score " + score;
 }
 
 </script>
