@@ -4,6 +4,7 @@ function jumper() {
     this.velocity = 0; //speed of gravity
     this.x = 50;
     this.y = 30;
+
     this.show = function() {
     fill(color('red'));
     rect(this.x, this.y, 50, 50);
@@ -13,11 +14,11 @@ function jumper() {
     this.y += this.lift;
     }
     if ((keyIsDown(68)) && (this.x < 1356)) {
-    this.x -= this.lift; //LEFT
+    this.x -= this.lift; //RIGHT
     }
     
     if ((keyIsDown(65)) && (this.x > 0)) {
-    this.x += this.lift; //RIGHT
+    this.x += this.lift; //LEFT
     }
  }
     this.update = function() {
