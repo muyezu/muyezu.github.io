@@ -1,7 +1,7 @@
 function jumper() {
     this.gravity = 10; //the force of gravity
-    this.lift = -20; //opposing force
-    this.velocity = 0; //speed of gravity
+    this.liftY = -20; //opposing force
+    this.liftX = -20;
     this.x = 50;
     this.y = 30;
 
@@ -11,31 +11,34 @@ function jumper() {
     }
     this.move = function() {
     if (keyIsDown(87) && (this.y > 0)) {
-    this.y += this.lift;
+    this.y += this.liftY; // W (UP)
+    }
+    if (keyIsDown(83) && (this.y < 728)) {
+    this.y -= this.liftY; // S (DOWN)
     }
     if ((keyIsDown(68)) && (this.x < 1356)) {
-    this.x -= this.lift; //RIGHT
+    this.x -= this.liftX; // D (RIGHT)
     }
     
-    if ((keyIsDown(65)) && (this.x > 0)) {
-    this.x += this.lift; //LEFT
+    if ((keyIsDown(65)) && (this.x > 10)) {
+    this.x += this.liftX; // A (LEFT)
     }
  }
     this.update = function() {
-    this.velocity += this.gravity;
-    this.y += this.velocity;
-    this.velocity *= 0.9;
-    if(this.y > h) {
-    this.y = h;
+    this.y += this.gravity;
+    if(this.y > h - 50) {
+    this.y = h - 50;
+    this.gravity = 0;
     }
-    if(this.y > 0) {
-    this.velocity = 0;
+    else {
+    this.gravity = 10;
     }
-    if(this.x > w) {
-    this.x = w;
+    if(this.x > w - 50) {
+    this.liftX = 0;
+    this.x = w - 50;
     }
-    if(this.x > 0) {
-    this.velocity = 0;
+    else{
+    this.liftX = -20;
     }
     }
 }
