@@ -13,10 +13,10 @@ function jumper() {
     if (keyIsDown(87) && (this.y > 0)) {
     this.y += this.liftY; // W (UP)
     }
-    if (keyIsDown(83) && (this.y < 728)) {
+    if (keyIsDown(83) && (this.y < w)) {
     this.y -= this.liftY; // S (DOWN)
     }
-    if ((keyIsDown(68)) && (this.x < 1356)) {
+    if ((keyIsDown(68)) && (this.x < w)) {
     this.x -= this.liftX; // D (RIGHT)
     }
     
