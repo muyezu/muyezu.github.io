@@ -7,6 +7,12 @@
 <audio id="deathSound">
 <source src="Pacman DeathGame Over Noise (HD).mp3" type="audio/mpeg">
 </audio>   
+<audio id="ACDC1">
+<source src="ACDC - Shoot To Thrill.mp3" type="audio/mpeg">
+</audio>   
+<audio id="ACDC2">
+<source src="AC_DC - Thunderstruck.mp3" type="audio/mpeg">
+</audio>   
 <style>
 
 body {
@@ -14,12 +20,20 @@ overflow: hidden;
 padding: 0;
 margin: 0;
 }
+#score {
+position: absolute;
+float: right;
+z-index:1;
+font-size: 20px;
+color:white;
+}
+
 
 </style>
 </head>
 <body>
 
-<h1 id="velocity"></h1>
+<h1 id="score"></h1>
 
 <script>
 
@@ -30,7 +44,10 @@ var jumper = new jumper(); //im going to create a global object
 var barrier = new barrier();
 var scoobysmack = false;
 var elim = document.getElementById('deathSound');
-
+var music1 = document.getElementById('ACDC1');
+var music2 = document.getElementById('ACDC2');
+music1.play();
+music2.play();
 
 function setup() {
 createCanvas(w,h);
@@ -45,8 +62,16 @@ barrier.show();
 barrier.update();
 scoobysmack = collideRectRect(jumper.x,jumper.y,50,50,barrier.a,barrier.b,100,300);
 if (scoobysmack === true) {
+music1.pause();
+music2.pause();
 elim.play();
 noLoop();
+}
+}
+
+function keyPressed() {
+if (keyCode === 82) {
+location.reload();
 }
 }
 
