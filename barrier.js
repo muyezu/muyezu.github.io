@@ -4,6 +4,7 @@ function barrier() {
   this.width = 300;
   this.a = w + this.width; //X AXIS
   this.b = Math.floor((Math.random() * h) - this.width); //Y AXIS
+  this.score = 0;
 
   this.show = function() {
   fill(color('blue'));    
@@ -18,6 +19,7 @@ function barrier() {
     this.a = w + this.width;
     this.b = Math.floor((Math.random() * h) - this.width); 
     score += 1;
+    document.getElementById('score').innerHTML = " This is your current Score " + score;
   }
     this.a -= this.velocityB;
   }
