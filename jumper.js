@@ -6,7 +6,10 @@ function jumper() {
     this.y = 30;
 
     this.show = function() {
-    fill(color('red'));
+    var r =  Math.floor((Math.random() * 256) - 0); 
+    var g =  Math.floor((Math.random() * 256) - 0); 
+    var b =  Math.floor((Math.random() * 256) - 0);     
+    fill(color(r,g,b));
     rect(this.x, this.y, 50, 50);
     }
     this.move = function() {
