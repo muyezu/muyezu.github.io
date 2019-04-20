@@ -10,8 +10,8 @@ function barrier() {
     var r =  Math.floor((Math.random() * 256) - 0); 
     var g =  Math.floor((Math.random() * 256) - 0); 
     var b =  Math.floor((Math.random() * 256) - 0);     
-    fill(color(r,g,b));
-  rect(this.a, this.b, this.height, this.width);
+    fill(color(r,g,b)); 
+    rect(this.a, this.b, this.height, this.width);
   if (this.a > 0) {
   this.velocityB ++;
   }
