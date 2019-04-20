@@ -9,10 +9,7 @@
 </audio>   
 <audio id="ACDC1">
 <source src="ACDC - Shoot To Thrill.mp3" type="audio/mpeg">
-</audio>   
-<audio id="ACDC2">
-<source src="AC_DC - Thunderstruck.mp3" type="audio/mpeg">
-</audio>   
+</audio>     
 <style>
 
 body {
@@ -27,13 +24,22 @@ z-index:1;
 font-size: 20px;
 color:white;
 }
-
+#restart {
+position: absolute;
+float: right;
+z-index:1;
+font-size: 20px;
+color:white;
+margin: 50px;
+}
 
 </style>
 </head>
 <body>
 
 <h1 id="score"></h1>
+
+<h1 id="restart"></h1>
 
 <script>
 
@@ -45,9 +51,8 @@ var barrier = new barrier();
 var scoobysmack = false;
 var elim = document.getElementById('deathSound');
 var music1 = document.getElementById('ACDC1');
-var music2 = document.getElementById('ACDC2');
 music1.play();
-music2.play();
+music1.loop = true;
 
 function setup() {
 createCanvas(w,h);
@@ -63,8 +68,8 @@ barrier.update();
 scoobysmack = collideRectRect(jumper.x,jumper.y,50,50,barrier.a,barrier.b,100,300);
 if (scoobysmack === true) {
 music1.pause();
-music2.pause();
 elim.play();
+document.getElementById('restart').innerHTML = "Press R to restart";
 noLoop();
 }
 }
