@@ -1,0 +1,47 @@
+<html>
+<head>
+
+<script src="p5.min.js"></script>
+<script src="p5.geolocation.js"></script>
+
+<style>
+
+
+
+</style>
+</head>
+<body>
+
+<h1 id="locAvail"></h1>
+<h1 id="distance"></h1>
+
+<script>
+
+var distance;
+var mylat;
+var mylon;
+var treasurelat = 21.310222;
+var treasurelon = -157.837545;
+
+function setup() {
+if(geoCheck() == true) {
+//geolocation is avalable 
+document.getElementById('locAvail').innerHTML = "Ready";
+distance = calcGeoDistance(mylat,mylon,treasurelat,treasurelon,'mi');
+}
+else{
+//error getting geolocation
+document.getElementById('locAvail').innerHTML = "Must have GPS enabled";
+}
+intervalCurrentPosition(positionPing,1000);
+}
+
+function positionPing(position) {
+mylat = position.latitude;
+mylon = position.longitude;
+document.getElementById('distance').innerHTML = distance;
+}
+
+</script> 
+</body>
+</html>
