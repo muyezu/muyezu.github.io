@@ -39,7 +39,11 @@ intervalCurrentPosition(positionPing,1000);
 function positionPing(position) {
 mylat = position.latitude;
 mylon = position.longitude;
-document.getElementById('distance').innerHTML = distance;
+distance = calcGeoDistance(mylat,mylon,treasurelat,treasurelon,'mi');
+document.getElementById('distance').innerHTML = distance.toFixed(2) + " mi";
+if (distance < 0.05) {
+document.getElementById('locAvail').innerHTML = "YOU FOUND THE TREASURE";
+}
 }
 
 </script> 
