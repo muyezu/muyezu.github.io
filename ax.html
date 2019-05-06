@@ -27,7 +27,7 @@ createCanvas(w,h);
 function draw() {
 ax = accelerationX;
 document.getElementById('ax').innerHTML = "X Accel = " + ax;
-if (ax < axHi) {
+if (ax > axHi) {
 axHi = ax;
 document.getElementById('ax').innerHTML = "X Accel = " + axHi;
 
