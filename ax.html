@@ -31,10 +31,10 @@ ax = accelerationX;
 document.getElementById('ax').innerHTML = "X Accel = " + ax;
 if (ax > axHi) {
 axHi = ax;
-document.getElementById('ax').innerHTML = "X Accel = " + axHi;
+document.getElementById('ax').innerHTML = "X Accel = " + axHi.toFixed(2);
 }
 rx = rotationX;
-document.getElementById('rx').innerHTML = "X rotation = " + rx;
+document.getElementById('rx').innerHTML = "X rotation = " + rx.toFixed(2);
 }
 
 
