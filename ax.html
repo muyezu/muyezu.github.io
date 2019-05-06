@@ -12,6 +12,7 @@
 <body>
 
 <h1 id="ax"></html>
+<h1 id="rx"></h1>
 
 <script>
 
@@ -19,6 +20,7 @@ var w = window.innerWidth;
 var h = window.innerHeight;
 var ax;
 var axHi = 0;
+var rx;
 
 function setup() {
 createCanvas(w,h);
@@ -30,8 +32,9 @@ document.getElementById('ax').innerHTML = "X Accel = " + ax;
 if (ax > axHi) {
 axHi = ax;
 document.getElementById('ax').innerHTML = "X Accel = " + axHi;
-
 }
+rx = rotationX;
+document.getElementById('rx').innerHTML = "X rotation = " + rx;
 }
 
 
