@@ -18,6 +18,7 @@
 var w = window.innerWidth;
 var h = window.innerHeight;
 var ax;
+var axHi = 0;
 
 function setup() {
 createCanvas(w,h);
@@ -26,6 +27,11 @@ createCanvas(w,h);
 function draw() {
 ax = accelerationX;
 document.getElementById('ax').innerHTML = "X Accel = " + ax;
+if (ax > axHi) {
+axHi = ax;
+document.getElementById('ax').innerHTML = "X Accel = " + axHi;
+
+}
 }
 
 
