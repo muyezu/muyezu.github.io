@@ -14,6 +14,9 @@
 <h1 id="ax"></html>
 <h1 id="rx"></h1>
 
+<h1 id="ay"></html>
+<h1 id="ry"></h1>
+
 <script>
 
 var w = window.innerWidth;
@@ -22,12 +25,17 @@ var ax;
 var axHi = 0;
 var rx;
 
+var ay;
+var ayHi = 0;
+var ry;
+
 function setup() {
 createCanvas(w,h);
 }
 
 function draw() {
 ax = accelerationX;
+ay = accelerationY;
 document.getElementById('ax').innerHTML = "X Accel = " + ax.toFixed(2);
 if (ax > axHi) {
 axHi = ax;
@@ -35,6 +43,15 @@ document.getElementById('ax').innerHTML = "X Accel = " + axHi.toFixed(2);
 }
 rx = rotationX;
 document.getElementById('rx').innerHTML = "X rotation = " + rx.toFixed(2);
+
+
+document.getElementById('ay').innerHTML = "Y Accel = " + ay.toFixed(2);
+if (ay > ayHi) {
+ayHi = ay;
+document.getElementById('ay').innerHTML = "Y Accel = " + ayHi.toFixed(2);
+}
+ry = rotationY;
+document.getElementById('ry').innerHTML = "Y rotation = " + ry.toFixed(2);
 }
 
 
